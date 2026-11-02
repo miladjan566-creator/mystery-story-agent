@@ -1,0 +1,16 @@
+name: Mystery Story Agent
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * *'
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start agent
+        run: |
+          echo "Mystery Story Agent started"
+          echo "Preparing daily story workflow"
+          date -u
